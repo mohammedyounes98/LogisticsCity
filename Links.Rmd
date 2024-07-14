@@ -1,19 +1,44 @@
 ---
 title: "Resources"
-output: html_document
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 1
+params:
+  logo: "logo.png"
 ---
 
-### R and R-Studio
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
+```
 
-[R](http://www.r-project.org) is a free open-source programming language that can be used for statistical analysis, data-simulation, graphing, and lots of other stuff. Another free program is [R-studio](http://www.rstudio.com), that provides a nice graphic interface for R. Download R first, then download R-studio. Both can run on PCs, Macs or Linux. Students will be learning R in the stats labs using the lab manual []().
+::: toc-header
+<img src="images/logo.png" alt="Logo"/>
+:::
 
-### Additional R resources
+### News from the Chair (2024-)
 
-1. Google is great, Google your problem
-2. [Stackoverflow](https://stackoverflow.com) is great, google will often take you there because someone has already asked your question, and someone else has answered, usually many people have answered your question many ways.
-3. Danielle Navarro wrote a [free Psych Stats textbook using R](https://compcogscisydney.org/learning-statistics-with-r/), it's worth checking out (some of our textbook are based on Danielle's)
-4. I am currently writing another stats textbook (incorporating some of the above). You can read it while it's being made right here [https://crumplab.github.io/statistics/](https://crumplab.github.io/statistics/), also check out the lab manual for more specific things about doing various stats in R (also in draft right now) [https://crumplab.github.io/statisticsLab/](https://crumplab.github.io/statisticsLab/)
-5. Daniell Navarro recently made this website for introducing R, it's great, check it out (also made using this R markdown process): [http://compcogscisydney.org/psyr/](http://compcogscisydney.org/psyr/)
-6. Check out my slightly older programming book that also introduces R [https://crumplab.github.io/programmingforpsych/](https://crumplab.github.io/programmingforpsych/)
-7. This is the definitive guide for all things R Markdown (you will find this very useful as you get better at this skill): [https://bookdown.org/yihui/rmarkdown/](https://bookdown.org/yihui/rmarkdown/)
+-   Finalization of a report from a joint workshop between Gustave Eiffel University (dir. Laetitia Dablanc) and ENSG on the geographical dispersion of warehouses in Lyon. Available here .
 
+-   Newsletter n°10 has arrived and can be consulted here .
+
+-   Arrival in March 2024 of the four 2024 Chair interns: Alexis Blet will work with L. Dablanc on Uberized delivery people and instant deliveries; Lise Phan will work with L. Dablanc on the public regulation of urban logistics; Paula Yaghi will work with A. Beyer (Institut Paris Région) and L. Dablanc on the organization of supplies for large retail outlets and the associated player strategies; and finally Mohammed Younes will work with Mr. Albertelli and Mr. Schorung on the spatial distribution of logistics warehouses around the world.
+
+-   “New data” on urban logistics flows: publication of the article Dablanc, L., Adoue, F. (2024) Urban logistics: “new data” to observe flows, what European cities teach us . Transport, Infrastructure & Mobility, 542 .
+
+-   2024 Chair team : Marion Albertelli joins the Chair as a new post-doctoral researcher and responsible for theme 2 of the scientific program.
+
+-   Theme 3 Research report on innovative strategies in Europe for the development of urban logistics: “ European strategies for urban logistics. 16 case studies of innovative initiatives in Europe ” (Alyssa Harris and Laetitia Dablanc, October 2023).
+
+-   Publication of the long-term post-doc offer from the Logistics City Chair
+
+-   Newsletter n°9 from the Logistics City Chair – October 2023
+
+-   Theme 1.1 macro analyzes of the spatial distribution of warehouses: work to deepen and enhance the Chair's database on logistics sprawl and the links between urban forms and the location of warehouses. The research report is available through this link . The summary presentation of the database and statistical work is available here.
+
+::: bottom-banner
+<img src="images/bottom-banner.png" alt="Logistics City Chair"/>
+:::

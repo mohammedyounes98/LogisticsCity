@@ -1,0 +1,31 @@
+---
+title: "Methodology"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 1
+params:
+  logo: "logo.png"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
+```
+
+
+::: toc-header
+<img src="images/logo.png" alt="Logo"/>
+:::
+
+## Analysis
+
+On the analysis of the warehouses location patterns: to show your first report on data collection + what Coriolan did during his internship)
+
+
+
+::: bottom-banner
+<img src="images/bottom-banner.png" alt="Logistics City Chair"/>
+:::

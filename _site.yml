@@ -1,11 +1,46 @@
-name: "MyLabJournal"
+name: "Logistics City Chair"
+favicon: images/logo.png
+
+search: 
+  location: navbar
+  type: overlay
+
 navbar:
-  title: "MyLabJournal"
+  title: "Logistics City Chair"
+  type: inverse
   left:
     - text: "Home"
       href: index.html
-    - text: "Journal"
-      href: Journal.html
-    - text: "Links"
-      href: Links.html
+      icon: fa-methodology
+    - text: "Peri-urban"
+      href: peri_urban.html
+      icon: fa-tree-city
+    - text: "E-commerce Warehousing"
+      href: ecommercewh.html
+      icon: fa-earth-europe
+    - text: "Methodology"
+      href: methodology.html
+    - text: "USA"
+      href: wh_usa.html
+      icon: fa-warehouse
+    - text: "Amazon"
+      href: amazon_wh_chair.html
+      icon: fa-amazon
+    - text: "References"
+      href: links.html
+      icon: fa-link
+  right:
+    - icon: fa-house
+      href: https://www.lvmt.fr/chaires/logistics-city/
+    - icon: fa-twitter
+      href: https://x.com/chairlogcityfr
+    
+margin-header: |
+    ![](images/logo.png)
+
+output:
+  html_document:
+    css: custom.css
+    #number_sections: no
+    #highlight: pygments ## specifies the syntax highlighting engine to use for code blocks
 output_dir: "docs"

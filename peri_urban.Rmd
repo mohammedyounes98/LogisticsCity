@@ -1,0 +1,30 @@
+---
+title: "Peri-urban Logisitcs Studies"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 1
+    #code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
+```
+
+
+::: sidebar-logo
+<img src="images/logo.png" alt="Logo"/>
+:::
+
+## Analysis of the warehousing differential prices between urban and suburban areas
+
+(with figures and maps from our research report Oliveira, Schorung, Dablanc)
+
+## New method proposal (work of Coriolan Gout)
+
+::: bottom-banner
+<img src="images/bottom-banner.png" alt="Logistics City Chair"/>
+:::

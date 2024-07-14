@@ -1,43 +1,98 @@
 ---
-title: "MyLabJournal"
-output: html_document
+title: "**Logistics City Chair**"
+output:
+  html_document:
+    css: custom.css
+    toc: true
+    toc_float: true
+    number_sections: false
+    toc_depth: 1
 ---
 
-<style type="text/css">
-.title {
-  display: none;
-}
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
+```
 
-#getting-started img {
-  margin-right: 10px;
-}
+# **Warehouses Database**
 
-</style>
+## Project Overview
 
-<div class="row" style="padding-top: 30px;">
-<div class="col-sm-6">
+Database on warehouse location logic in 78 global cities , following a comparative meta-analysis. The following document is the summary presentation of the database:
 
-# **My Lab Journal**
+<iframe src="https://www.lvmt.fr/wp-content/uploads/2019/10/Dablanc-Schorung-De-Oliveira-Palacios-Arguello-De-Oliveira-Yaghi-October-2023.pdf" width="100%" height="800px">
 
-This is a template example for lab journaling. Students in Matt Crump's Human Cognition and Performance Lab will use this template to learn R, and other things. Students can replace this text with more fun things. People not in my lab can use this too.
+</iframe>
 
-## How to use
+# *Description of the Chair*
 
-1. fork the repo for this website and follow instructions on read me to get set up. [https://github.com/CrumpLab/LabJournalWebsite](https://github.com/CrumpLab/LabJournalWebsite)
+New concepts, new urban logistics companies are emerging in Asia, Europe and the United States, and more recently in all urban regions of the world, driven by digital revolutions. This logistics aims to meet the demand of urban businesses and consumers for new services while providing solutions to cities' concerns about the environmental and social impacts of current urban deliveries.
 
-2. Blog/journal what you are doing in R, by editing the Journal.Rmd. See the [Journal page](https://crumplab.github.io/LabJournalWebsite/Journal.html) for an example of what to do to get started learning R.
+For cities with efficient urban logistics (like Tokyo) which integrate logistics equipment in very dense urban areas or "smart" neighborhood logistics, there are still many less central districts and many large cities in the world whose congestion and emissions linked to the transport of goods remain at far too high levels, while social issues (jobs and working conditions) become more acute.
 
-3. See the [links page](https://crumplab.github.io/LabJournalWebsite/Links.html) for lots of helpful links on learning R.
+The Logistics City Chair fits into this context, with a dual specific ambition:
 
-4. Change everything to make it your own.
+-   Pay particular attention, particularly through the disciplines of town planning and development, to the issue of warehouses as crucial logistical locations for urban and metropolitan environments.
 
+-   Explore the impact on urban logistics and territories of new consumption and distribution trends, particularly those linked to e-commerce and more generally to digital transformations. We will work in the Ile-de-France region, from a very comparative perspective by collecting data and identifying developments in other major world cities.
 
-</div>
-<div class="col-sm-6">
+We aim to increase knowledge while ensuring that we provide methodological tools to public and private actors in urban logistics, in order to contribute to the development of public policies relating to the mobility of goods, the energy transition of the sector, the new logistics real estate and employment.
 
-### [Crump Lab: Human Cognition and Performance](https://crumplab.github.io)
+# *Chair governance*
 
-<a href = "https://crumplab.github.io">
-![](images/logo.png)
-</a>
-</div>
+## **The animation team (Steering committee)**
+
+-   **Laetitia Dablanc** , Research Director and Chair Director, Gustave Eiffel University
+
+-   Marion Albertelli, Post-doctoral student, Gustave Eiffel University
+
+-   Juliette Berthon, CSR and Innovation Director, Sogaris
+
+-   Inès Balligand, Director of Development, Sogaris
+
+-   Suzanne Friedrich, R&D and Innovation Project Manager, Sogaris
+
+**Steering and Evaluation Committee (COE)**
+
+-   Jonathan Sebbane, Managing Director and President of the COE of the Chair, Sogaris
+
+-   Serge Piperno, Vice-President Research, Gustave Eiffel University
+
+-   Pierre Launay, Freight and Logistics Project Manager, Ile-de-France Regional Council
+
+-   Martine Vazquez, Urban logistics project manager, Métropole du Grand Paris
+
+-   Julien Aldhuy, Lecturer, Paris Est Créteil University
+
+-   Adeline Heitz, Lecturer, National Conservatory of Arts and Crafts
+
+-   Heleen Buldeo Rai, Researcher, Vrije Universiteit, Brussels
+
+-   Cécile Maisonneuve, Institut Montaigne
+
+-   Claude Samson, AFILOG (alternate: Diana Diziain)
+
+-   Marion Waller, General Director of the Pavillon de l’Arsenal
+
+-   Juliette Berthon, CSR and Innovation Director, Sogaris
+
+-   Inès Balligand, Director of Development, Sogaris
+
+-   Pétronille Rème Harnay, Director of the SPLOTT laboratory, Gustave Eiffel University
+
+-   Pierre Zembri, Director of the LVMT laboratory, Gustave Eiffel University
+
+-   Laetitia Dablanc, Research Director, LVMT, Gustave Eiffel University
+
+**Chair Council (CC)**
+
+-   Muriel Jougleux, Vice-President Partnerships and Professionalization, Gustave Eiffel University
+
+-   Guillemette Karpeles, Deputy Director, Sogaris
+
+-   Juliette Berthon, CSR and Innovation Director, Sogaris
+
+-   Laetitia Dablanc, Research Director, LVMT, Gustave Eiffel University
+
+::: bottom-banner
+<img src="images/bottom-banner.png" alt="Logistics City Chair"/>
+:::

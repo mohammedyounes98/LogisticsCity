@@ -1,0 +1,32 @@
+---
+title: "Case Study: Amazon Warehousing Activites"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 1
+params:
+  logo: "logo.png"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
+```
+
+
+::: toc-header
+<img src="images/logo.png" alt="Logo"/>
+:::
+
+
+-   Study on the spatial logic of establishing Amazon warehouses in the United States, carried out by Matthieu Schorung and Thibault Lecourt (GIS expert).
+
+<center><img src="https://www.lvmt.fr/wp-content/uploads/2019/10/WashNY_2021-768x543.png" width="75%"/></center>
+
+
+::: bottom-banner
+<img src="images/bottom-banner.png" alt="Logistics City Chair"/>
+:::
+

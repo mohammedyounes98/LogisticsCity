@@ -1,34 +1,53 @@
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
 
 <head>
 
 <meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
 
-<title>MyLabJournal</title>
+<title>Logistics City Chair</title>
 
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.27/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
 
 <style type="text/css">code{white-space: pre;}</style>
-<style type="text/css">
-  pre:not([class]) {
-    background-color: white;
-  }
-</style>
 <script type="text/javascript">
 if (window.hljs) {
   hljs.configure({languages: []});
@@ -41,37 +60,12 @@ if (window.hljs) {
 
 
 
-<style type="text/css">
-h1 {
-  font-size: 34px;
-}
-h1.title {
-  font-size: 38px;
-}
-h2 {
-  font-size: 30px;
-}
-h3 {
-  font-size: 24px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  font-size: 16px;
-}
-h6 {
-  font-size: 12px;
-}
-.table th:not([align]) {
-  text-align: left;
-}
-</style>
 
 
-</head>
 
-<body>
+<link rel="stylesheet" href="custom.css" type="text/css" />
+
+
 
 <style type = "text/css">
 .main-container {
@@ -79,13 +73,8 @@ h6 {
   margin-left: auto;
   margin-right: auto;
 }
-code {
-  color: inherit;
-  background-color: rgba(0, 0, 0, 0.04);
-}
 img {
   max-width:100%;
-  height: auto;
 }
 .tabbed-pane {
   padding-top: 12px;
@@ -96,44 +85,59 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
 </style>
 
 
 <style type="text/css">
-/* padding for bootstrap navbar */
-body {
-  padding-top: 51px;
-  padding-bottom: 40px;
+.dropdown-submenu {
+  position: relative;
 }
-/* offset scroll position for anchor links (for fixed navbar)  */
-.section h1 {
-  padding-top: 56px;
-  margin-top: -56px;
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
 }
-
-.section h2 {
-  padding-top: 56px;
-  margin-top: -56px;
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
 }
-.section h3 {
-  padding-top: 56px;
-  margin-top: -56px;
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
 }
-.section h4 {
-  padding-top: 56px;
-  margin-top: -56px;
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
 }
-.section h5 {
-  padding-top: 56px;
-  margin-top: -56px;
+.dropdown-submenu.pull-left {
+  float: none;
 }
-.section h6 {
-  padding-top: 56px;
-  margin-top: -56px;
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
 }
 </style>
 
-<script>
+<script type="text/javascript">
 // manage active state of menu based on current page
 $(document).ready(function () {
   // active menu anchor
@@ -143,98 +147,358 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.parent().addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
 });
 </script>
-
-
-<div class="container-fluid main-container">
 
 <!-- tabsets -->
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-</script>
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
 
 <!-- code folding -->
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
 
 
 
-<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div class="navbar navbar-inverse  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">MyLabJournal</a>
+      <a class="navbar-brand" href="index.html">Logistics City Chair</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">Home</a>
+  <a href="index.html">
+    <span class="fa fa-methodology"></span>
+     
+    Home
+  </a>
 </li>
 <li>
-  <a href="Journal.html">Journal</a>
+  <a href="peri_urban.html">
+    <span class="fa fa-tree-city"></span>
+     
+    Peri-urban
+  </a>
 </li>
 <li>
-  <a href="Links.html">Links</a>
+  <a href="ecommercewh.html">
+    <span class="fa fa-earth-europe"></span>
+     
+    E-commerce Warehousing
+  </a>
+</li>
+<li>
+  <a href="methodology.html">Methodology</a>
+</li>
+<li>
+  <a href="wh_usa.html">
+    <span class="fa fa-warehouse"></span>
+     
+    USA
+  </a>
+</li>
+<li>
+  <a href="amazon_wh_chair.html">
+    <span class="fa fa-amazon"></span>
+     
+    Amazon
+  </a>
+</li>
+<li>
+  <a href="links.html">
+    <span class="fa fa-link"></span>
+     
+    References
+  </a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://www.lvmt.fr/chaires/logistics-city/">
+    <span class="fa fa-house"></span>
+     
+  </a>
+</li>
+<li>
+  <a href="https://x.com/chairlogcityfr">
+    <span class="fa fa-twitter"></span>
+     
+  </a>
+</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
 
-<div class="fluid-row" id="header">
+<div id="header">
 
 
 
-<h1 class="title toc-ignore">MyLabJournal</h1>
+<h1 class="title toc-ignore"><strong>Logistics City Chair</strong></h1>
 
 </div>
 
 
-<style type="text/css">
-.title {
-  display: none;
-}
-
-#getting-started img {
-  margin-right: 10px;
-}
-
-</style>
-<div class="row" style="padding-top: 30px;">
-<div class="col-sm-6">
-<h1 id="my-lab-journal"><strong>My Lab Journal</strong></h1>
-<p>This is a template example for lab journaling. Students in Matt Crump’s Human Cognition and Performance Lab will use this template to learn R, and other things. Students can replace this text with more fun things. People not in my lab can use this too.</p>
-<h2 id="how-to-use">How to use</h2>
-<ol style="list-style-type: decimal">
-<li><p>fork the repo for this website and follow instructions on read me to get set up. <a href="https://github.com/CrumpLab/LabJournalWebsite" class="uri">https://github.com/CrumpLab/LabJournalWebsite</a></p></li>
-<li><p>Blog/journal what you are doing in R, by editing the Journal.Rmd. See the <a href="https://crumplab.github.io/LabJournalWebsite/Journal.html">Journal page</a> for an example of what to do to get started learning R.</p></li>
-<li><p>See the <a href="https://crumplab.github.io/LabJournalWebsite/Links.html">links page</a> for lots of helpful links on learning R.</p></li>
-<li><p>Change everything to make it your own.</p></li>
-</ol>
+<div id="warehouses-database" class="section level1">
+<h1><strong>Warehouses Database</strong></h1>
+<div id="project-overview" class="section level2">
+<h2>Project Overview</h2>
+<p>Database on warehouse location logic in 78 global cities , following
+a comparative meta-analysis. The following document is the summary
+presentation of the database:</p>
+<iframe src="https://www.lvmt.fr/wp-content/uploads/2019/10/Dablanc-Schorung-De-Oliveira-Palacios-Arguello-De-Oliveira-Yaghi-October-2023.pdf" width="100%" height="800px">
+</iframe>
 </div>
-<div class="col-sm-6">
-<h3 id="crump-lab-human-cognition-and-performance"><a href="https://crumplab.github.io">Crump Lab: Human Cognition and Performance</a></h3>
-<p><a href = "https://crumplab.github.io"> <img src="images/logo.png" /> </a></p>
+</div>
+<div id="description-of-the-chair" class="section level1">
+<h1><em>Description of the Chair</em></h1>
+<p>New concepts, new urban logistics companies are emerging in Asia,
+Europe and the United States, and more recently in all urban regions of
+the world, driven by digital revolutions. This logistics aims to meet
+the demand of urban businesses and consumers for new services while
+providing solutions to cities’ concerns about the environmental and
+social impacts of current urban deliveries.</p>
+<p>For cities with efficient urban logistics (like Tokyo) which
+integrate logistics equipment in very dense urban areas or “smart”
+neighborhood logistics, there are still many less central districts and
+many large cities in the world whose congestion and emissions linked to
+the transport of goods remain at far too high levels, while social
+issues (jobs and working conditions) become more acute.</p>
+<p>The Logistics City Chair fits into this context, with a dual specific
+ambition:</p>
+<ul>
+<li><p>Pay particular attention, particularly through the disciplines of
+town planning and development, to the issue of warehouses as crucial
+logistical locations for urban and metropolitan environments.</p></li>
+<li><p>Explore the impact on urban logistics and territories of new
+consumption and distribution trends, particularly those linked to
+e-commerce and more generally to digital transformations. We will work
+in the Ile-de-France region, from a very comparative perspective by
+collecting data and identifying developments in other major world
+cities.</p></li>
+</ul>
+<p>We aim to increase knowledge while ensuring that we provide
+methodological tools to public and private actors in urban logistics, in
+order to contribute to the development of public policies relating to
+the mobility of goods, the energy transition of the sector, the new
+logistics real estate and employment.</p>
+</div>
+<div id="chair-governance" class="section level1">
+<h1><em>Chair governance</em></h1>
+<div id="the-animation-team-steering-committee" class="section level2">
+<h2><strong>The animation team (Steering committee)</strong></h2>
+<ul>
+<li><p><strong>Laetitia Dablanc</strong> , Research Director and Chair
+Director, Gustave Eiffel University</p></li>
+<li><p>Marion Albertelli, Post-doctoral student, Gustave Eiffel
+University</p></li>
+<li><p>Juliette Berthon, CSR and Innovation Director, Sogaris</p></li>
+<li><p>Inès Balligand, Director of Development, Sogaris</p></li>
+<li><p>Suzanne Friedrich, R&amp;D and Innovation Project Manager,
+Sogaris</p></li>
+</ul>
+<p><strong>Steering and Evaluation Committee (COE)</strong></p>
+<ul>
+<li><p>Jonathan Sebbane, Managing Director and President of the COE of
+the Chair, Sogaris</p></li>
+<li><p>Serge Piperno, Vice-President Research, Gustave Eiffel
+University</p></li>
+<li><p>Pierre Launay, Freight and Logistics Project Manager,
+Ile-de-France Regional Council</p></li>
+<li><p>Martine Vazquez, Urban logistics project manager, Métropole du
+Grand Paris</p></li>
+<li><p>Julien Aldhuy, Lecturer, Paris Est Créteil University</p></li>
+<li><p>Adeline Heitz, Lecturer, National Conservatory of Arts and
+Crafts</p></li>
+<li><p>Heleen Buldeo Rai, Researcher, Vrije Universiteit,
+Brussels</p></li>
+<li><p>Cécile Maisonneuve, Institut Montaigne</p></li>
+<li><p>Claude Samson, AFILOG (alternate: Diana Diziain)</p></li>
+<li><p>Marion Waller, General Director of the Pavillon de
+l’Arsenal</p></li>
+<li><p>Juliette Berthon, CSR and Innovation Director, Sogaris</p></li>
+<li><p>Inès Balligand, Director of Development, Sogaris</p></li>
+<li><p>Pétronille Rème Harnay, Director of the SPLOTT laboratory,
+Gustave Eiffel University</p></li>
+<li><p>Pierre Zembri, Director of the LVMT laboratory, Gustave Eiffel
+University</p></li>
+<li><p>Laetitia Dablanc, Research Director, LVMT, Gustave Eiffel
+University</p></li>
+</ul>
+<p><strong>Chair Council (CC)</strong></p>
+<ul>
+<li><p>Muriel Jougleux, Vice-President Partnerships and
+Professionalization, Gustave Eiffel University</p></li>
+<li><p>Guillemette Karpeles, Deputy Director, Sogaris</p></li>
+<li><p>Juliette Berthon, CSR and Innovation Director, Sogaris</p></li>
+<li><p>Laetitia Dablanc, Research Director, LVMT, Gustave Eiffel
+University</p></li>
+</ul>
+<div class="bottom-banner">
+<p><img src="images/bottom-banner.png" alt="Logistics City Chair"/></p>
+</div>
+</div>
 </div>
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -242,13 +506,59 @@ $(document).ready(function () {
 
 // add bootstrap table styles to pandoc tables
 function bootstrapStylePandocTables() {
-  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
 }
 $(document).ready(function () {
   bootstrapStylePandocTables();
 });
 
 
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
 </script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->

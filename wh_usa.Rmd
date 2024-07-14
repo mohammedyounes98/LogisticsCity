@@ -1,0 +1,143 @@
+---
+title: "Warehousing in the USA"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 1
+params:
+  logo: "logo.png"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
+```
+
+
+::: toc-header
+<img src="images/logo.png" alt="Logo"/>
+:::
+
+
+## Warehouses Analysis in the US:
+
+The following map shows the density of the warehouses in the studied areas:
+
+<center>
+
+```{r, message = FALSE, warning = FALSE, echo=FALSE}
+
+USA_results <- sf::st_read("D:/Master Thesis/DBMS/LVMT_DB/data/old_database/USA_metro_results_dissolved_editedfieldnames.shp", quiet = TRUE)
+
+
+# Transform the CRS to WGS84 (EPSG:4326)
+USA_results <- st_transform(USA_results, crs = 4326)
+
+
+USA_results$density_tn <- as.numeric(gsub(",", ".", USA_results$density_tn))
+
+
+pal <- colorNumeric(palette = "viridis", domain = USA_results$density_tn)
+
+
+USA_density <- leaflet(data = USA_results) %>%
+  addTiles() %>%
+  addPolygons(
+    fillColor = ~pal(density_tn),
+    color = '#BDBDC3',
+    weight = 1,
+    fillOpacity = 0.6,
+    popup = ~paste("Density:", density_tn)
+  ) %>%
+  addLegend(pal = pal, values = ~density_tn, opacity = 0.7, title = "Density",
+            position = "bottomright")
+USA_density
+
+
+```
+
+</center>
+
+The following map shows the number of the warehouses in the studied areas:
+
+<center>
+
+```{r, message = FALSE, warning = FALSE, echo=FALSE}
+USA_results$warehous_1  <- as.numeric(gsub(",", ".", USA_results$warehous_1 ))
+
+
+# Get the centroids of the polygons
+sf_use_s2(FALSE)
+USA_results_valid <- st_make_valid(USA_results)
+USA_results_centroids <- st_centroid(USA_results_valid)
+sf_use_s2(TRUE)
+
+
+# Replace commas with dots and convert 'warehouses' to numeric
+USA_results_centroids$warehous_1 <- as.numeric(gsub(",", ".", USA_results_centroids$warehous_1))
+
+# Remove rows with NA values in 'warehouses'
+USA_results_centroids <- USA_results_centroids[!is.na(USA_results_centroids$warehous_1), ]
+
+
+
+pal <- colorNumeric("viridis", domain = USA_results_centroids$warehous_1, na.color = "transparent")
+
+USA_warehouses_numbers <- leaflet(data = USA_results_centroids) %>%
+  addTiles() %>%
+  addCircleMarkers(
+    radius = ~sqrt(warehous_1),  
+    fillColor = ~pal(warehous_1),
+    color = "black",
+    weight = 1,
+    fillOpacity = 0.6,
+    stroke = FALSE,
+    popup = ~paste("Warehouses:", warehous_1)
+  ) %>%
+  addLegend(
+    position = "bottomright",
+    title = "Number of Warehouses",
+    pal = pal,
+    values = ~warehous_1,
+    labels = ~sprintf("%d", sort(unique(warehous_1)))
+  )
+
+# Display the map
+USA_warehouses_numbers
+
+```
+
+</center>
+
+Or the maps can be presented in tabs like this:
+
+## Analysis Results {.tabset}
+
+### Warehouses Numbers
+
+<center>
+
+```{r}
+USA_warehouses_numbers
+
+```
+
+</center>
+
+### Warehouses Density
+
+<center>
+
+```{r}
+USA_density
+```
+
+</center>
+
+
+::: bottom-banner
+<img src="images/bottom-banner.png" alt="Logistics City Chair"/>
+:::
+
