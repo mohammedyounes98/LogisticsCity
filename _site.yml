@@ -16,7 +16,7 @@ navbar:
       href: peri_urban.html
       icon: fa-tree-city
     - text: "E-commerce Warehousing"
-      href: ecommercewh.html
+#      href: ecommercewh.html
       icon: fa-earth-europe
     - text: "Methodology"
       href: methodology.html
