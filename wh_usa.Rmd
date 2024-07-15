@@ -21,7 +21,7 @@ knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
 :::
 
 
-## Warehouses Analysis in the US:
+# Warehouses Analysis in the US:
 
 The following map shows the density of the warehouses in the studied areas:
 
@@ -113,9 +113,9 @@ USA_warehouses_numbers
 
 Or the maps can be presented in tabs like this:
 
-## Analysis Results {.tabset}
+# Analysis Results {.tabset}
 
-### Warehouses Numbers
+## Warehouses Numbers
 
 <center>
 
@@ -126,7 +126,7 @@ USA_warehouses_numbers
 
 </center>
 
-### Warehouses Density
+## Warehouses Density
 
 <center>
 

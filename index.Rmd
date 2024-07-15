@@ -23,6 +23,14 @@ Database on warehouse location logic in 78 global cities , following a comparati
 
 </iframe>
 
+
+---
+
+
+<iframe src="https://docs.google.com/spreadsheets/d/175FNjg94NO3Tv386Dg77C0xEwAovmOMj/edit?usp=sharing&amp;ouid=108499269969626770235&amp;rtpof=true&amp;sd=true" frameborder="0" width="100%" height="1000">
+
+</iframe>
+
 # Description of the Chair
 
 New concepts, new urban logistics companies are emerging in Asia, Europe and the United States, and more recently in all urban regions of the world, driven by digital revolutions. This logistics aims to meet the demand of urban businesses and consumers for new services while providing solutions to cities' concerns about the environmental and social impacts of current urban deliveries.

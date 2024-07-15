@@ -13,12 +13,22 @@ output:
 knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
 ```
 
-
 ::: sidebar-logo
 <img src="images/logo.png" alt="Logo"/>
 :::
 
 # E-commerce Warehousing in France {.tabset .unnumbered}
+
+## Presentation
+
+<iframe src="https://drive.google.com/file/d/1qVwl3Nzz6ghZsRFoU599BR5cz7jg4DtP/view?usp=sharing" width="100%" height="800px">
+
+
+## Internship Timeline
+<img src="images/internship_timeline.png" alt="Internship Timeline"/>
+
+</iframe>
+
 
 ## Cartographic Results:
 
@@ -187,7 +197,6 @@ warehouse_map <- warehouse_map %>%
 
 ```
 
-
 # Interactive Map
 
 The following map shows the last two approaches experimented to identify the ecommerce warehouses, the categories of the layers in the map show the what category each of the warehouses are actually classified in SITADEL database,
@@ -206,8 +215,6 @@ warehouse_map
 
 Of course each approach has its own issues and lacks of an ultimate verification method. This one for example included some locations that are in the middle of nowhere. Also some establishments have the area wrong with enormus numbers. And finally, the filtering process for some reason it didn't result with the actual results that we may get if we did the filtering manually in the database frame, for example Amazon two logistics companies include more than 30 warehouses but not all of them are showing up on the map.
 
-
-
 # Interactive Table
 
 <center>
@@ -223,13 +230,9 @@ datatable(excel_data, options = list(pageLength = 5, autoWidth = TRUE, scrollX =
 
 </center>
 
+# Difficulties
 
-
-
-## Difficulties
-
-# Main Issues in detecting e-comemrce warehousing activities in France
-
+## Main Issues in detecting e-comemrce warehousing activities in France
 
 ::: bottom-banner
 <img src="images/bottom-banner.png" alt="Logistics City Chair"/>

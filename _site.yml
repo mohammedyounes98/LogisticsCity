@@ -15,7 +15,7 @@ navbar:
     - text: "Peri-urban"
       href: peri_urban.html
       icon: fa-tree-city
-    - text: "E-commerce Warehousing"
+    - text: "E-commerce"
       href: ecommercewh.html
       icon: fa-earth-europe
     - text: "Methodology"
@@ -30,6 +30,10 @@ navbar:
     - text: "References"
       href: links.html
       icon: fa-link
+    - text: "Appendices"
+      href: appendices.html
+      icon: fa-paperclip
+    
   right:
     - icon: fa-regular fa-building
       href: https://www.lvmt.fr/chaires/logistics-city/

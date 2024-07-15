@@ -24,6 +24,11 @@ body {
   width: 100%;
   top: 0;
   z-index: 1000;
+  margin: 0 5;
+}
+
+.navbar-container {
+  padding: 0 5px;
 }
 
 .navbar a {
@@ -87,4 +92,14 @@ body {
 .bottom-banner img {
   max-width: 100%; /* Make sure the image fits within the container */
   height: auto;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-top: 1px solid #ccc;
 }

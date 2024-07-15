@@ -1,0 +1,88 @@
+---
+title: "Appendices"
+output:
+  html_document:
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 1
+    footer: |
+      <div class="footer">
+        <img src="images/bottom-banner.png" alt="Logistics City Chair"/>
+      </div>
+params:
+  logo: "logo.png"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# **Technical Notes** {.tabset .unnumbered}
+
+## DBMS
+
+**Main Interface**
+
+The website will serve as the primary interface for the research chair, providing access to data visualizations, analysis results, and reports.
+
+**Data Analysis**
+
+Tool: R programming language Code Storage: GitHub repository to maintain and version control all analysis scripts.
+
+**Data Storage**
+
+Raw Data and Results: Stored on a cloud drive (to be determined). This includes documents, images, and spreadsheets.
+
+**Database Choice**
+
+PostgreSQL with PostGIS: For advanced spatial data handling and geospatial analysis.
+
+**Data Integration**
+
+Primary Data Sources: SIRENE, SITADEL, FEVAD list, INSEE datasets.
+
+**Tools and Technologies**
+
+-   R and Leaflet: For statistical analysis and interactive mapping.
+
+-   pgAdmin: For database management and administration.
+
+## Mapping
+
+The project leverages Leaflet for interactive mapping of spatial data related to e-commerce warehouses. Leaflet provides a user-friendly interface to visualize geospatial data, allowing for dynamic and responsive maps embedded in the website.
+
+Below is a basic example of how Leaflet is used to create interactive maps in the project:
+
+```{r, eval=F}
+pal <- colorNumeric(palette = "viridis", domain = USA_results$density_tn)
+
+
+USA_density <- leaflet(data = USA_results) %>%
+  addTiles() %>%
+  addPolygons(
+    fillColor = ~pal(density_tn),
+    color = '#BDBDC3',
+    weight = 1,
+    fillOpacity = 0.6,
+    popup = ~paste("Density:", density_tn)
+  ) %>%
+  addLegend(pal = pal, values = ~density_tn, opacity = 0.7, title = "Density",
+            position = "bottomright")
+```
+
+## Data Sources
+
+-   INSEE
+-   SITADEL
+-   SIRENE
+-   GR-SIG
+-   FEVAD
+
+
+
+
+::: bottom-banner
+<img src="images/bottom-banner.png" alt="Logistics City Chair"/>
+:::
