@@ -206,7 +206,9 @@ warehouse_map
 
 Of course each approach has its own issues and lacks of an ultimate verification method. This one for example included some locations that are in the middle of nowhere. Also some establishments have the area wrong with enormus numbers. And finally, the filtering process for some reason it didn't result with the actual results that we may get if we did the filtering manually in the database frame, for example Amazon two logistics companies include more than 30 warehouses but not all of them are showing up on the map.
 
-# Interactive Table:
+
+
+# Interactive Table
 
 <center>
 
@@ -220,6 +222,13 @@ datatable(excel_data, options = list(pageLength = 5, autoWidth = TRUE, scrollX =
 ```
 
 </center>
+
+
+
+
+## Difficulties
+
+# Main Issues in detecting e-comemrce warehousing activities in France
 
 
 ::: bottom-banner

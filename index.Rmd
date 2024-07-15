@@ -23,7 +23,7 @@ Database on warehouse location logic in 78 global cities , following a comparati
 
 </iframe>
 
-# *Description of the Chair*
+# Description of the Chair
 
 New concepts, new urban logistics companies are emerging in Asia, Europe and the United States, and more recently in all urban regions of the world, driven by digital revolutions. This logistics aims to meet the demand of urban businesses and consumers for new services while providing solutions to cities' concerns about the environmental and social impacts of current urban deliveries.
 
@@ -37,7 +37,7 @@ The Logistics City Chair fits into this context, with a dual specific ambition:
 
 We aim to increase knowledge while ensuring that we provide methodological tools to public and private actors in urban logistics, in order to contribute to the development of public policies relating to the mobility of goods, the energy transition of the sector, the new logistics real estate and employment.
 
-# *Chair governance*
+# Chair governance
 
 ## **The animation team (Steering committee)**
 

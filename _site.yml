@@ -11,7 +11,7 @@ navbar:
   left:
     - text: "Home"
       href: index.html
-      icon: fa-methodology
+      icon: fa-home
     - text: "Peri-urban"
       href: peri_urban.html
       icon: fa-tree-city
@@ -20,6 +20,7 @@ navbar:
       icon: fa-earth-europe
     - text: "Methodology"
       href: methodology.html
+      icon: fa-screwdriver-wrench
     - text: "USA"
       href: wh_usa.html
       icon: fa-warehouse
@@ -30,7 +31,7 @@ navbar:
       href: links.html
       icon: fa-link
   right:
-    - icon: fa-house
+    - icon: fa-regular fa-building
       href: https://www.lvmt.fr/chaires/logistics-city/
     - icon: fa-twitter
       href: https://x.com/chairlogcityfr
@@ -38,6 +39,11 @@ navbar:
 margin-header: |
     ![](images/logo.png)
 
+sidebar:
+    contents:
+    - text: "Database Management"
+    - href: dbm.html
+    
 output:
   html_document:
     css: custom.css
