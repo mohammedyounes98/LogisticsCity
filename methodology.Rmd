@@ -25,6 +25,7 @@ On the analysis of the warehouses location patterns: to show your first report o
 
 # Warehouses Enumeration Approaches {.tabset}
 
+::: panel-tabset
 ## NAF Codes
 
 One of the first and basic methods utilized was a direct use of logistics activities-related NAF codes in SIRENE database to locate logistic warehouses, and then, the NAF codes were used as categories to explore potential use of them.
@@ -57,6 +58,9 @@ The following map shows the results of this process with an overlay layer of th
 
 ::: {style="clear: both;"}
 :::
+:::
+
+\
 
 ------------------------------------------------------------------------
 

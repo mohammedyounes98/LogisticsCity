@@ -1,56 +1,65 @@
 name: "Logistics City Chair"
-favicon: images/logo.png
 
-search: 
-  location: navbar
-  type: overlay
-
-navbar:
-  title: "Logistics City Chair"
-  type: inverse
-  left:
-    - text: "Home"
-      href: index.html
-      icon: fa-home
-    - text: "Peri-urban"
-      href: peri_urban.html
-      icon: fa-tree-city
-    - text: "E-commerce"
-      href: ecommercewh.html
-      icon: fa-earth-europe
-    - text: "Methodology"
-      href: methodology.html
-      icon: fa-screwdriver-wrench
-    - text: "USA"
-      href: wh_usa.html
-      icon: fa-warehouse
-    - text: "Amazon"
-      href: amazon_wh_chair.html
-      icon: fa-amazon
-    - text: "References"
-      href: links.html
-      icon: fa-link
-    - text: "Appendices"
-      href: appendices.html
-      icon: fa-paperclip
-    
-  right:
-    - icon: fa-regular fa-building
-      href: https://www.lvmt.fr/chaires/logistics-city/
-    - icon: fa-twitter
-      href: https://x.com/chairlogcityfr
-    
+website:
+    title: "<b>Logistics City Chair</b>"
+    favicon: images/logo.png
+    description: "Logistics City Chair Website - LVMT"
+    search: 
+      location: navbar
+      type: overlay
+    navbar:
+      title: "Logistics City Chair"
+      type: inverse
+      left:
+        - text: "Home"
+          href: index.html
+          icon: fa-home
+        - text: "Peri-urban"
+          href: peri_urban.html
+          icon: fa-tree-city
+        - text: "E-commerce"
+          href: ecommercewh.html
+          icon: fa-earth-europe
+        - text: "Methodology"
+          href: methodology.html
+          icon: fa-screwdriver-wrench
+        - text: "USA"
+          href: wh_usa.html
+          icon: fa-warehouse
+        - text: "Amazon"
+          href: amazon_wh_chair.html
+          icon: fa-amazon
+        - text: "References"
+          href: links.html
+          icon: fa-link
+        - text: "Appendices"
+          href: appendices.html
+          icon: fa-paperclip
+      tools:
+        - icon: fa-regular fa-building
+          href: https://www.lvmt.fr/chaires/logistics-city/
+        - icon: fa-twitter
+          href: https://x.com/chairlogcityfr
+    sidebar:
+      contents:
+        - text: "Database Management"
+        - href: dbm.html
+      - text: "---"
+      - section: "<b>Methodology</b>"
+        contents:
+          - href: amazon.html
+            text: Amazon Analysis
 margin-header: |
     ![](images/logo.png)
 
-sidebar:
-    contents:
-    - text: "Database Management"
-    - href: dbm.html
+page-footer: <img src="images/bottom-banner.png" alt="Logistics City Chair"/>
+
     
 output:
   html_document:
     css: custom.css
+    toc: true
+    page-layout: full
     #number_sections: no
     #highlight: pygments ## specifies the syntax highlighting engine to use for code blocks
 output_dir: "docs"
