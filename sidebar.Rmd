@@ -1,0 +1,16 @@
+### Navigation
+
+* [Home](index.html)
+* [About](about.html)
+* [Contact](contact.html)
+
+### Resources
+
+* [Methodology](methodology.html)
+* [USA](usa.html)
+* [Amazon](amazon.html)
+
+### Social Media
+
+* [Twitter](https://twitter.com/yourhandle)
+* [GitHub](https://github.com/yourusername)

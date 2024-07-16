@@ -1,0 +1,105 @@
+/* custom.css */
+body {
+  background-color: #ffffff; /* White background */
+  color: #223159; /* Dark blue text */
+  padding-top: 70px; /* Space for the navbar */
+  padding-bottom: 60px; /* Space for the bottom banner */
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  flex: 1; /* Allow content to take up available space */
+  margin-left: 220px; /* Adjust this value based on TOC width */
+  margin-right: 220px; /* Adjust this value based on image width */
+}
+
+.navbar {
+  background-color: #223159; /* Dark blue navbar */
+  color: #ffffff; /* White text in navbar */
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  margin: 0 5;
+}
+
+.navbar-container {
+  padding: 0 5px;
+}
+
+.navbar a {
+  color: #ffffff !important; /* White links in navbar */
+}
+
+.navbar-header {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-header img {
+  height: 40px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+.title {
+  display: none;
+}
+
+#getting-started img {
+  margin-right: 10px;
+}
+
+.toc {
+  position: fixed;
+  top: 70px; /* Below the navbar */
+  left: 0;
+  width: 200px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar-logo {
+  position: fixed;
+  top: 70px; /* Below the navbar */
+  right: 0;
+  width: 200px;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-left: 1px solid #ddd;
+}
+
+.sidebar-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Bottom banner styling */
+.bottom-banner {
+  /* position: absolute; ## in order to make it part of the page, we turn it off */
+  background-color: #ffffff; /* White background */
+  text-align: center;
+  padding: 5px 0;
+  margin-top: 20px;
+  clear: both;
+}
+
+.bottom-banner img {
+  max-width: 100%; /* Make sure the image fits within the container */
+  height: auto;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}

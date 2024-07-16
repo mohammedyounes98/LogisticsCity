@@ -1,0 +1,50 @@
+name: "Logistics City Chair"
+favicon: images/logo.png
+
+navbar:
+  title: "Logistics City Chair"
+  left:
+    - text: "Home"
+      href: index.html
+      icon: fa-home
+    - text: "Peri-urban"
+      href: peri_urban.html
+      icon: fa-tree-city
+    - text: "E-commerce"
+      href: ecommercewh.html
+      icon: fa-earth-europe
+    - text: "Methodology"
+      href: methodology.html
+      icon: fa-screwdriver-wrench
+    - text: "USA"
+      href: wh_usa.html
+      icon: fa-warehouse
+    - text: "Amazon"
+      href: amazon_wh_chair.html
+      icon: fa-amazon
+    - text: "References"
+      href: links.html
+      icon: fa-link
+    - text: "Appendices"
+      href: appendices.html
+      icon: fa-paperclip
+  right:
+    - icon: fa-regular fa-building
+      href: https://www.lvmt.fr/chaires/logistics-city/
+    - icon: fa-twitter
+      href: https://x.com/chairlogcityfr
+
+margin-header: |
+    ![](images/logo.png)
+
+page-footer: |
+    <img src="images/bottom-banner.png" alt="Logistics City Chair"/>
+
+output_dir: "docs"
+output:
+  html_document:
+    css: custom.css
+    toc: true
+    toc_float: true
+    number_sections: false
+    toc_depth: 1

@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+
+
+<title>Peri-urban Logisitcs Studies</title>
+
+<script src="site_libs/header-attrs-2.27/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="custom.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+
+
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
+
+
+<div id="header">
+
+
+
+<h1 class="title toc-ignore">Peri-urban Logisitcs Studies</h1>
+
+</div>
+
+
+<div class="sidebar-logo">
+<p><img src="images/logo.png" alt="Logo"/></p>
+</div>
+<div
+id="analysis-of-the-warehousing-differential-prices-between-urban-and-suburban-areas"
+class="section level2">
+<h2>Analysis of the warehousing differential prices between urban and
+suburban areas</h2>
+<p><font style="vertical-align: inherit;">The Logistics City Chair is
+dedicated to research on urban logistics, with a focus on three
+scientific axes:</font></font></em></strong></span></p>
+</h4>
+<h4 style="text-align: left">
+<p><span
+style="color: #4ed98d"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" class="">THEME
+1.</font></font></strong></span><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" class="">
+Urban logistics real
+estate</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" class="">
+, new economic models of metropolitan logistics real estate, strategies
+for implementing logistics buildings in large
+metropolises.</font></font></p>
+</h4>
+<p style="text-align: justify">
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">You
+can find all the documents relating to the
+</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Chair’s
+warehouse
+database</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+and </font><strong><font style="vertical-align: inherit;">cartographic
+</font></strong></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">production</font></font></strong>
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+on a dedicated page accessible in the following tab
+</font><strong><font style="vertical-align: inherit;">“Warehouse
+database”</font></strong><font style="vertical-align: inherit;">
+.</font></font><strong><font style="vertical-align: inherit;"></font></strong><font style="vertical-align: inherit;"></font><strong><font style="vertical-align: inherit;"></font></strong><font style="vertical-align: inherit;"></font></p>
+</p>
+<p style="text-align: left">
+<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GOALS
+:</font></font></p>
+</p>
+<ul style="text-align: justify">
+<li style="text-align: left">
+<p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Logistics
+sprawl and urban
+logistics</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+: analysis of territorial dynamics linked to the evolution of the
+location of logistics activities, at the “macro”
+level.</font></font></p>
+</li>
+<li>
+<p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Database
+on warehouse location logic in 78 world
+cities</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+, following a comparative meta-analysis. </font></font></p>
+<ul style="text-align: justify">
+<li>
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The
+summary presentation of the updated research (October 2023) can be
+discovered via this
+</font></font><strong><a href="https://www.lvmt.fr/wp-content/uploads/2019/10/Dablanc-Schorung-De-Oliveira-Palacios-Arguello-De-Oliveira-Presentation-synthetique-update-2024.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">link</font></font></a></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+.</font></font>
+</li>
+<li>
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The
+research report (September 2023) co-written by Renata de Oliveira and
+Matthieu Schorung, under the supervision of Laetitia Dablanc is
+available via this
+</font></font><a href="https://www.lvmt.fr/wp-content/uploads/2019/10/De-Oliveira-et-al-final-report-9-Oct-2023-final-version-1.pdf"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">link</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+.</font></font>
+</li>
+<li>
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The
+entire Chair database can be consulted via this
+</font></font><a href="https://docs.google.com/spreadsheets/d/175FNjg94NO3Tv386Dg77C0xEwAovmOMj/edit?usp=drive_link&amp;ouid=107636382782267213283&amp;rtpof=true&amp;sd=true"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">link</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+. The dataset on logistics sprawl can be consulted
+</font></font><a href="https://docs.google.com/spreadsheets/d/17fePE7aBjJ7s6LE86IxA4jUhYtELmiTQ/edit?usp=drive_link&amp;ouid=107636382782267213283&amp;rtpof=true&amp;sd=true"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">here</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+.</font></font>
+</li>
+<li>
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">You
+can find the
+</font></font><a href="https://halshs.archives-ouvertes.fr/halshs-03369462" target="_blank" rel="noopener"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">research
+report</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+(2022) on logistics sprawl and the price differential for warehouse
+rental between urban and peri-urban areas based on a comparison of
+several dozen global metropolises, co-written by Renata de Oliveira,
+Matthieu Schorung and Laetitia Dablanc.</font></font>
+</li>
+<li>
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The
+initial presentation at the launch of this research, by Laetitia
+Dablanc, Laura Palacios-Argüello and Leise de Oliveira (2020), on the
+logic of warehouse location is still available via this
+</font></font><strong><a href="https://www.lvmt.fr/wp-content/uploads/2022/01/Dablanc-Palacios-Arguello-De-Oliveira-2020.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">link</font></font></a></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+.</font></font>
+</li>
+</ul>
+</li>
+<li style="text-align: left">
+<p><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Logistics
+urban
+planning</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+: analysis of public policies, the history of the production of the
+first buildings, the economic paradox of urban logistics and regulatory
+obstacles, at the “micro” level.</font></font></p>
+</li>
+</ul>
+<p>
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SEARCH
+RESULTS :</font></font>
+</p>
+<ul style="list-style-type: disc">
+<li>
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Finalization
+of a report from a joint workshop between Gustave Eiffel University
+(dir. Laetitia Dablanc) and ENSG on the geographical dispersion of
+warehouses in Lyon. Available
+</font></font><a href="https://www.lvmt.fr/wp-content/uploads/2019/10/rapport_DABLANC_-_COLLIARD_HILLAIRET_DIZIER_compressed.pdf"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">here</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+.</font></font>
+</li>
+<li>
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Publication
+of an article in
+</font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Géotransports</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+by Matthieu Schorung and Vincent Escarfail, former Chair intern (posted
+online in February 2024) on “Studying the catchment areas of logistics
+warehouses to deepen the geography of urban logistics. The case of the
+territory of Greater Paris Seine Ouest (GPSO) in Ile-de-France”.
+Available through this
+</font></font><a href="https://www.geotransports.fr/num%C3%A9ro-20"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">link</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+.</font></font>
+</li>
+<li>
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Publication
+of an article in the
+</font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bulletin
+of the Association of French
+Geographers</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+by Matthieu Schorung (put online in January 2024) on “The Amazon system
+in the United States facing crises: mirror of the transport and
+logistics system of the United States United”. Available through this
+</font></font><strong><a href="https://journals.openedition.org/bagf/11529#quotation"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">link</font></font></a></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+.</font></font>
+</li>
+<li>
+<strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Theme
+1.1</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+(macro analyzes of the spatial distribution of warehouses) of the
+scientific program: deepening and valorization of the Chair’s database
+on logistics sprawl and the links between urban forms and the location
+of warehouses. The research report is available through this
+</font></font><a href="https://www.lvmt.fr/wp-content/uploads/2019/10/De-Oliveira-et-al-final-report-9-Oct-2023-final-version-1.pdf"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">link</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+. The summary presentation of the database and statistical work is
+available
+</font></font><a href="https://www.lvmt.fr/wp-content/uploads/2019/10/Dablanc-Schorung-De-Oliveira-Palacios-Arguello-De-Oliveira-Yaghi-October-2023.pdf"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">here</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+.</font></font>
+</li>
+<li>
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Master
+thesis by Aliénor Vézinet (intern, research 2023) on intermediate
+logistics and tactical and strategic urban planning strategies. His
+dissertation is available via this
+</font></font><a href="https://www.lvmt.fr/wp-content/uploads/2019/10/MEMOIRE-ALIENOR-VEZINET-DELCOUR.pdf"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">link</font></font></strong>
+</a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+and his brief via this
+</font></font><a href="https://www.lvmt.fr/wp-content/uploads/2019/10/Brief-Vezinet-vf-FR.pdf"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">link</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+.</font></font>
+</li>
+<li>
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Two
+communications at the World Conference on Transport Research (Montreal):
+</font></font><a href="https://www.lvmt.fr/wp-content/uploads/2019/10/WCTR_Schorung_Dablanc_Lecourt_-presentation.pdf"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">one</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+on the Chair’s research on Amazon;
+</font></font><a href="https://www.lvmt.fr/wp-content/uploads/2019/10/WCTR_Schorung_Lecourt_presentation.pdf"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">the
+other</font></font></strong>
+</a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+on logistical sprawl in American metropolises.</font></font>
+</li>
+<li>
+<a href="https://www.lvmt.fr/wp-content/uploads/2019/10/Note-de-recherche-Coriolan-Gout-Tokyo_VF.pdf"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Publication</font></font></strong>
+</a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+of a research note written by Coriolan Gout on the spatial distribution
+of warehouses and the rental logistics market in the Tokyo metropolitan
+area, May 2023.</font></font>
+</li>
+<li>
+<strong><a href="https://www.revue-urbanites.fr/vu-schorung/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Publication</font></font></a>
+</strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+of a portfolio article by Matthieu Schorung in the urban studies
+journal</font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+Urbanités</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+on the urban impacts of e-commerce in New York, March
+2023.</font></font>
+</li>
+<li>
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Publication
+of a research report on quick commerce and dark stores (April 2023)
+written by Matthieu Schorung, available via this
+</font></font><a href="https://www.lvmt.fr/wp-content/uploads/2019/10/Research-report-Quick-commerce-Schorung-mars-23-EN.pdf"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">link</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+, March 2023.</font></font>
+</li>
+<li>
+<strong><a href="https://www.lvmt.fr/wp-content/uploads/2019/10/Memoire-VF-C.GOUT_compressed.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Memory</font></font></a>
+</strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+and</font></font><strong><a href="https://www.lvmt.fr/wp-content/uploads/2019/10/Brief-mémoire-Coriolan-Gout-VF.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+brief</font></font></a></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+: A comparative analysis of the principles of localization of logistics
+activities in Paris and New York by Coriolan Gout</font></font>
+</li>
+<li>
+<a href="https://www.lvmt.fr/wp-content/uploads/2019/10/Rapport-de-Stage-Keenan-Ouaksel_compressed.pdf"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Internship
+report</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+: Characterizing and mapping the impacts of new urban logistics spaces
+(technical and methodological report) by Keenan Ouaksel</font></font>
+</li>
+<li>
+<strong><a href="https://www.lvmt.fr/wp-content/uploads/2019/10/Memoire-VF-S.Friedrich.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Memory</font></font></a>
+</strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+and</font></font><strong><a href="https://www.lvmt.fr/wp-content/uploads/2019/10/Brief-Suzanne-Friedrich-VF.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+brief</font></font></a></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+: Logistical infrastructures of short food circuits (Ile-de-France) by
+Suzanne Friedrich (Sogaris/Chair internship)</font></font>
+</li>
+<li>
+<a href="https://doi.org/10.1016/j.tra.2022.10.007" target="_blank" rel="noopener"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Publication</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+of an article
+in</font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+Transportation Research Part A: Policy and
+Practice</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+on the development of logistics spaces in dense and mixed urban areas in
+New York, Paris, Seoul, Shanghai and Tokyo by Heleen Buldeo Rai,
+Sanggyun Kang, Takanori Sakai, Carla Tejada, Quan (Jack) Yuan, Alison
+Conway and Laetitia Dablanc</font></font>
+</li>
+<li>
+<strong><a href="https://www.lvmt.fr/wp-content/uploads/2019/10/1-s2.0-S0966692322001739-main-3_compressed.pdf"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Publication</font></font></a>
+</strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+of an article
+in</font></font><em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+Journal of Transport
+Geography</font></font></em><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+on the relationship between warehouse location and price differentials
+based on a comparison of American cities (in English) by Renata de
+Oliveira, Laetitia Dablanc and Matthieu Schorung</font></font>
+</li>
+<li>
+<strong><a href="https://drive.google.com/file/d/18pLAegEpFKSf5SkXpIzdpPXelwAa0JQU/view?usp=sharing"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" class="">Publication</font></font></a>
+</strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;" class="">
+of an electronic booklet on the geography of warehouses in the United
+States, by Matthieu Schorung with the support of Thibault Lecourt under
+the supervision of Laetitia Dablanc</font></font>
+</li>
+<li>
+<strong><a href="https://www.lvmt.fr/wp-content/uploads/2021/12/Rapport-de-recherche_Amazon_Matthieu_Schorung_compressed.pdf" target="_blank" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Research
+report</font></font></a>
+</strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+: “Analysis of the spatial logics of Amazon warehouses following a
+multiscalar and temporal approach. For a geography of the Amazon
+logistics system in the United
+States</font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><span
+class="fontstyle0">“, by Matthieu Schorung and Thibault
+Lecourt</font></font></span>
+</li>
+<li>
+<a href="https://halshs.archives-ouvertes.fr/halshs-03369462" target="_blank" rel="noopener"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Research
+report</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+: “Relationships among urban characteristics, real estate market, and
+spatial patterns of warehouses in different geographic
+contexts</font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><span
+class="fontstyle0">”</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+, on logistics sprawl and the price differential for renting warehouses
+between urban and peri-urban territories from a comparison of several
+dozen world metropolises, by Renata de Oliveira (Professor – Department
+of Applied Social Sciences Federal Center for Technological Education of
+Minas Gerais), Matthieu Schorung and Laetitia Dablanc (in
+English)</font></font>
+</li>
+<li>
+<a href="https://www.lvmt.fr/wp-content/uploads/2019/10/Soiree-diapos-avec-Laetitia-et-Matthieu-VF_compressed.pdf"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Slideshow</font></font></strong>
+</a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+: restitution of a research field in New York carried out in
+February/March 2022 by Matthieu Schorung and Laetitia Dablanc on the
+organization of urban logistics and the spatial effects of
+e-commerce!</font></font>
+</li>
+<li>
+<a href="https://www.lvmt.fr/wp-content/uploads/2021/10/2021-Memoire-Loick-Ulliac.pdf" target="_blank" rel="noopener"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Memory</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+and</font></font><a href="https://www.lvmt.fr/wp-content/uploads/2019/10/2021-Brief-Loick-Ulliac.pdf" target="_blank" rel="noopener"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+brief</font></font></strong>
+</a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+: The economic models of urban logistics real estate, by Loïck
+Ulliac</font></font>
+</li>
+<li>
+<strong><a href="https://www.lvmt.fr/wp-content/uploads/2021/10/2021-Memoire-Vincent-Escarfail.pdf" target="_blank" rel="noopener"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Memory</font></font></a>
+</strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+and</font></font><a href="https://www.lvmt.fr/wp-content/uploads/2019/10/2021-Brief-Vincent-Escarfail.pdf" target="_blank" rel="noopener"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+brief</font></font></strong>
+</a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+: Greater Paris Seine Ouest, A territory served by logistics:
+territorial diagnosis of urban logistics, by Vincent
+Escarfail</font></font>
+</li>
+<li>
+<font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Report
+</font></font><a href="https://www.lvmt.fr/wp-content/uploads/2021/06/Rapport_Atelier-GPSO_2021-1-24.pdf" target="_blank" rel="noopener"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">part
+1</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+and
+</font></font><a href="https://www.lvmt.fr/wp-content/uploads/2021/06/Rapport_Atelier-GPSO_2021-25-44.pdf" target="_blank" rel="noopener"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">part
+2</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+: Territorial diagnosis of logistics real estate in Greater Paris Seine
+Ouest and its prospects for development,
+</font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><span
+class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">by
+M2 students from the Paris School of Urban Planning and the École des
+Ponts ParisTech </font></font></span>
+</li>
+<li>
+<a href="https://www.lvmt.fr/wp-content/uploads/2020/11/JAYLE-m%C3%A9moire-version-chaire.pdf" target="_blank" rel="noopener"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thesis</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+: Logistics in the restructuring of an urban boulevard, the case of the
+RD932, by Gaëtan-Max Jayle</font></font>
+</li>
+<li>
+<a href="https://www.lvmt.fr/wp-content/uploads/2020/06/Memoire_ZACHERT_PLU_Version-chaire.pdf" target="_blank" rel="noopener"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Thesis</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+:</font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><span
+class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0"> Study
+of the logistical dimension of the local urban planning plan (PLU) of
+Paris, by Damien Zachert</font></font></span>
+</li>
+<li>
+<p><a href="https://www.lvmt.fr/wp-content/uploads/2020/02/atelier-eup.pdf" target="_blank" rel="noopener"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Report</font></font></strong></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+:</font></font><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"><span
+class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0">Study
+</font></font></span><span class="css-901oao css-16my406 r-1qd0xha r-ad9z0x r-bcqeeo r-qvutc0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> on
+intermediate logistics real estate in the inner suburbs, the case of the
+Est Ensemble territory, by M1 students from the Paris School of Urban
+Planning</font></p>
+<p>(with figures and maps from our research report Oliveira, Schorung,
+Dablanc)</p>
+</div>
+<div id="new-method-proposal-work-of-coriolan-gout"
+class="section level2">
+<h2>New method proposal (work of Coriolan Gout)</h2>
+<div class="bottom-banner">
+<p><img src="images/bottom-banner.png" alt="Logistics City Chair"/></p>
+</div>
+</div>
+
+
+
+</div>
+</div>
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>

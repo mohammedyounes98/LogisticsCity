@@ -5,30 +5,27 @@ body {
   padding-top: 70px; /* Space for the navbar */
   padding-bottom: 60px; /* Space for the bottom banner */
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .content {
   flex: 1; /* Allow content to take up available space */
   margin-left: 220px; /* Adjust this value based on TOC width */
   margin-right: 220px; /* Adjust this value based on image width */
+  padding: 20px; /* Add padding to separate content from sidebars */
 }
 
 .navbar {
   background-color: #223159; /* Dark blue navbar */
   color: #ffffff; /* White text in navbar */
-  padding: 0px;
+  padding: 0 15px;
   display: flex;
   align-items: center;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
-  margin: 0 5;
-}
-
-.navbar-container {
-  padding: 0 5px;
+  margin: 0;
 }
 
 .navbar a {
@@ -62,6 +59,8 @@ body {
   background-color: #f9f9f9;
   padding: 10px;
   border-right: 1px solid #ddd;
+  height: calc(100% - 130px); /* Full height minus navbar and bottom banner */
+  overflow-y: auto; /* Scroll if content overflows */
 }
 
 .sidebar-logo {
@@ -72,6 +71,8 @@ body {
   background-color: #f9f9f9;
   padding: 10px;
   border-left: 1px solid #ddd;
+  height: calc(100% - 130px); /* Full height minus navbar and bottom banner */
+  overflow-y: auto; /* Scroll if content overflows */
 }
 
 .sidebar-logo img {
@@ -81,11 +82,9 @@ body {
 
 /* Bottom banner styling */
 .bottom-banner {
-  /* position: absolute; ## in order to make it part of the page, we turn it off */
   background-color: #ffffff; /* White background */
   text-align: center;
   padding: 5px 0;
-  margin-top: 20px;
   clear: both;
 }
 

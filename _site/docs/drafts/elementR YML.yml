@@ -1,0 +1,97 @@
+project:
+  type: website
+lang: fr
+website:
+  title: "<b>ElementR</b>"
+  favicon: img/ElementR.png
+  twitter-card: true
+  site-url: https://elementr.gitpages.huma-num.fr/website/
+  description: "Site web du groupe d’utilisateur·rice·s ElementR"
+  page-navigation: false
+  search: 
+    location: navbar
+    type: overlay
+  navbar:
+    background: "#1a8d73"
+    left: 
+      - href: programme.qmd
+        text: Programme 
+      - href: seance.qmd
+        text: Supports & matériaux
+      - href: apropos.qmd
+        text: Á propos
+    right:
+      - href: contact.qmd
+        text: Contact
+    tools:
+      - icon: git
+        aria-label: GitLab
+        text: GitLab
+        href: https://gitlab.huma-num.fr/elementr/website
+  sidebar:
+    contents:
+      - href: programme.qmd
+        text: "<b>Programme & inscriptions</b>"
+      - text: "---"
+      - section: "<b>Séances de formation</b>"
+        contents:
+          - href: posts/seance1.qmd
+            text: Introduction ElementR
+          - href: posts/seance2.qmd 
+            text: Initiation à R (théorique)
+          - href: posts/seance3.qmd
+            text: Initiation à R (pratique)
+          - href: posts/seance4_ggplot.qmd
+            text: Représentation graphique
+          - href: posts/seance5_carto_mapsf.qmd
+            text: Cartographie avec R
+          - href: posts/seance6_geomatique_sf.qmd
+            text: Geomatique avec R (I)       
+          - href: posts/seance7_igraph.qmd
+            text: Analyse de réseau (I) 
+          - href: posts/seance8_quarto.qmd
+            text: Document computationnel
+          - href: posts/seance11_uni_bivarie.qmd
+            text: Statistique uni et bivariée
+          - href: posts/seance12_raster_terra.qmd
+            text: Manipulation de raster avec R
+          - href: posts/seance13_webscraping.qmd
+            text: Premier pas en webscraping
+      - text: "---"
+      - section: "<b>Ateliers pratiques</b>"
+        contents: 
+          - href: posts/atelier_enquete_sncf.qmd
+            text: Données enquête SNCF
+      - text: "---"
+      - section: "<b>Retours d'expériences</b>"
+        contents: 
+          - href: posts/seance9_R_et_these.qmd
+            text: R au long cours
+      - text: "---"
+      - section: "<b>Tables rondes</b>"
+        contents: 
+          - href: posts/seance10_table_ronde_analyse_textuelle.qmd
+            text: Analyse textuelle
+      - text: "---"
+      - contact.qmd
+
+            
+
+  page-footer: ElementR 2022 - [![licensebuttons by-nc](https://licensebuttons.net/l/by-nc/4.0/80x15.png)](https://creativecommons.org/licenses/by-nc/4.0) - UMR Géographie-Cités · UMR PRODIG · UAR RIATE
+  margin-header: |
+    ![](img/ElementR.png)
+
+
+format:
+  html:
+    theme: 
+      light: Minty
+      dark: cyborg
+    css: styles.css
+    toc: true
+    page-layout: full
+    include-in-header:
+      file: matomo_tracking.html
+
+editor: visual
+

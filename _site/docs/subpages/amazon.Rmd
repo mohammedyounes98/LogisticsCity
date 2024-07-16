@@ -1,0 +1,49 @@
+---
+title: "**Amazon Warehousing Activities Analysis**"
+subtitle: "Logistics City Chair work on Amazon Logistic Activities in the US"
+image: images/amazon_logo.png
+---
+
+::: columns ::: {.column width="100%"} <object class="slide" data="files/mid_presentation.pdf" type="application/pdf">
+
+</object>
+
+:::
+
+\
+
+::: diapo
+<object class="slide" data="files/mid_presentation.pdf" type="application/pdf">
+
+<iframe src="https://docs.google.com/viewer?url=your_url_to_pdf&amp;embedded=true" width="20">
+
+</iframe>
+
+</object>
+:::
+
+\
+
+::: diapo
+<iframe class="slide2" src="https://elementr.gitpages.huma-num.fr/session_graphique/ggplot2/#/title-slide">
+
+</iframe>
+:::
+
+## Here try to add an html map:
+
+::: quartodoc
+<iframe class="slide2" data="files/warehouse_map.html">
+
+</iframe>
+:::
+
+### For specific icons other than fa, you can check [Bootstrap](https://icons.getbootstrap.com/).
+
+\
+
+::: callout-tip
+## For your information
+
+**Most of the approaches are not accurate** : dqsdqsdfsfsqf test
+:::
