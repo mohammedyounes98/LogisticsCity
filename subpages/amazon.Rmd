@@ -1,51 +1,48 @@
 ---
 title: "**Amazon Warehousing Activities Analysis**"
 subtitle: "Logistics City Chair work on Amazon Logistic Activities in the US"
-image: images/amazon_logo.png
 output:
   html_document:
-    toc: false
-    toc_float: false
-    toc_collapsed: false
-    sidebar: sidebar.html
+    toc: true
+    toc_float: true
+    collapsed: false
+    number_sections: false
+    toc_depth: 1
+    css: custom.css  # link to common CSS file
 ---
 
-::: columns
-::: {.column width="100%"}
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(message=FALSE,warning=FALSE, cache=TRUE)
+```
+# ¨Presentation
+
 <object class="slide" data="files/mid_presentation.pdf" type="application/pdf">
 
-</object>
-:::
-:::
+\
+\
+
+</object> ::: :::
+::: diapo <object class="slide" data="files/mid_presentation.pdf" type="application/pdf">
+
+# Test for an html presentation
 
 ::: diapo
-<object class="slide" data="files/mid_presentation.pdf" type="application/pdf">
 
-<iframe src="https://docs.google.com/viewer?url=your_url_to_pdf&amp;embedded=true" width="20">
-
-</iframe>
-
-</object>
-:::
-
-::: diapo
-<iframe class="slide2" data="files/Presentation_Mohammed_YOUNES.html">
-
-</iframe>
-:::
-
-## Here try to add an html map:
-
+<iframe class="slide2" src="files/Presentation_Mohammed_YOUNES.html"> </iframe> :::
+Here try to add an html map:
 ::: quartodoc
-<iframe class="slide2" src="files/warehouse_map.html">
 
-</iframe>
-:::
 
-### For specific icons other than fa, you can check [Bootstrap](https://icons.getbootstrap.com/).
+# test for a map
 
+<iframe class="slide2" src="files/warehouse_map.html"> </iframe> :::
+For specific icons other than fa, you can check Bootstrap.
 ::: callout-tip
-## For your information
 
-**Most of the approaches are not accurate** : dqsdqsdfsfsqf test
-:::
+\
+
+For your information
+Most of the approaches are not accurate : dqsdqsdfsfsqf test :::
+  
+  
+  
