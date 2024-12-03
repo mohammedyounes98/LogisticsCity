@@ -11,9 +11,11 @@ output:
 name: "Logistics City Chair"
 favicon: images/logo.png
 
+
+
 navbar:
   title: "Logistics City Chair"
-  type: inverse
+  type: inversejust the design
   left:
     - text: "Home"
       icon: fa-home
@@ -32,10 +34,6 @@ navbar:
       icon: fa-warehouse
     - text: "Amazon"
       href: amazon_wh_chair.html
-      menu:
-        - text: "Amazon"
-          href: subpages/amazon.html
-          icon: fa-link
       icon: fa-amazon
     - text: "References"
       href: links.html
